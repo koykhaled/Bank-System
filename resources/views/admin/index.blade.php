@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Dashboard
+    Home
 @endsection
 
 @section('index')

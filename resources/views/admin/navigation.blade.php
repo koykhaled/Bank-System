@@ -7,7 +7,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('home') }}">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -15,7 +15,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('customers.index') }}">
                 <span class="icon">
                     <ion-icon name="person-outline"></ion-icon>
                 </span>
