@@ -21,4 +21,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::group(['prefix' => 'customers'], function () {
     Route::get('/', [CustomerController::class, 'index'])->name('customers.index');
+    Route::get('/{id}', [CustomerController::class, 'show'])->name('customers.show');
+    Route::post('/{id}/transfares', [CustomerController::class, 'transfare'])->name('customers.transfares');
 });

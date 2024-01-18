@@ -85,6 +85,8 @@ body{
     color:var(--color-light);
 }
 
+
+
 .navigation ul li a h2{
     text-transform: uppercase;
     font-weight: 600;
@@ -337,8 +339,14 @@ body{
     font-weight: 500;
 }
 
-button,a{
+a{
     margin-left: 10px;
+    text-decoration: none;
+    color: var(--color-gray);
+    font-weight: 600;
+}
+a:hover{
+    color: var(--color-main);
 }
 
 .btn--main {
@@ -438,19 +446,19 @@ button{
     width: 90%;
     max-width: 48rem;
     max-height: 40rem;
-    height: 59%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -46%);
+    height: auto;
+    margin: 0 auto;
+    position: relative;
     background-color: var(--color-dark);
     border-radius: 1rem;
     box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin-top: 3rem;
 }
 
 .layout__boxHeader {
     display: flex;
+    align-items: center;
     padding: 1.5rem;
     background-color: var(--color-dark-light);
 }
@@ -465,12 +473,6 @@ button{
     text-transform: uppercase;
     font-weight: 500;
     color: var(--color-light);
-}
-
-.layout__boxTitle svg {
-    width: 1.6rem;
-    height: 1.6rem;
-    fill: var(--color-main);
 }
 
 .layout__body {
@@ -647,5 +649,37 @@ button{
         top: initial;
         right: 0;
         left: initial;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout__box {
+        width: 90%;
+        max-width: 90%;
+        max-height: none;
+        height: auto;
+        top: initial;
+        left: initial;
+        transform: initial;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .layout__boxHeader {
+        padding: 1rem;
+    }
+
+    .layout__body {
+        margin: 2rem;
+    }
+
+    .form__group select option {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .layout__body {
+        margin: 1rem;
     }
 }

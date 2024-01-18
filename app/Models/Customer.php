@@ -39,6 +39,6 @@ class Customer extends Model
 
     public function transfares()
     {
-        return $this->hasMany(Transfare::class, 'from');
+        return $this->hasMany(Transfare::class, 'from', 'account');
     }
 }

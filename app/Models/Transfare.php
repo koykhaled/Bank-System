@@ -13,6 +13,7 @@ class Transfare extends Model
 
     protected $fillable = [
         'amount',
+        'from',
         'to',
         'transfared_at'
     ];
@@ -27,13 +28,9 @@ class Transfare extends Model
         });
     }
 
-    public function to()
+    public function transfares()
     {
         return $this->belongsTo(Customer::class, 'account');
     }
 
-    public function from()
-    {
-        return $this->belongsTo(Customer::class, 'account');
-    }
 }

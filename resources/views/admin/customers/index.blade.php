@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+    Customers
+@endsection
 @section('topics')
     <div class="details">
         <div class="topic__header">
@@ -8,6 +11,7 @@
             </div>
         </div>
         <div class="topics">
+            <x-notify::notify />
             <div class="cardHeader">
                 @if (count($customers) > 0)
                     <Table>
@@ -20,8 +24,9 @@
                         <tbody>
                             @foreach ($customers as $customer)
                                 <tr>
-                                    <td>{{ $customer->name }}</td>
-                                    <td>{{ $customer->balance }}</td>
+                                    <td><a class="customer-link"
+                                            href="{{ route('customers.show', $customer->id) }}">{{ $customer->name }}</td>
+                                    <td>{{ $customer->balance }} $</td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
+    @notifyCss
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="{{ asset('assets/favicon.ico') }}" type="image/x-icon" />
-    <link rel="stylesheet" href="{{ asset('vendor/mckenziearts/laravel-notify/js/notify.js') }}" />
     <link rel="stylesheet" href="{{ asset('css/dashboard/style.css') }}" />
     <title>@yield('title')</title>
 </head>
@@ -28,7 +28,7 @@
     <script src="{{ asset('js/dashboard/main.js') }}"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="{{ asset('vendor/mckenziearts/laravel-notify/js/notify.js') }}"></script>
+    @notifyJs
 </body>
 
 </html>
