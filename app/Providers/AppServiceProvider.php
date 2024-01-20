@@ -2,8 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\Customer;
-use App\Observers\TransfareObserve;
+use App\Services\CustomerTransfareService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,6 +13,9 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
+        $this->app->bind(CustomerTransfareService::class, function ($app) {
+            return new CustomerTransfareService();
+        });
     }
 
     /**
@@ -22,7 +24,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-
-        Customer::observe(TransfareObserve::class);
     }
 }

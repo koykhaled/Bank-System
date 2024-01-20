@@ -2,7 +2,7 @@
     <ul>
         <li>
             <a href="" class="header__logo">
-                <img src="{{ secure_asset('assets/logo.svg') }}" />
+                <img src="{{ asset('assets/logo_small.png') }}" />
                 <h2>BankSys</h2>
             </a>
         </li>
@@ -17,7 +17,7 @@
         <li>
             <a href="{{ route('customers.index') }}">
                 <span class="icon">
-                    <ion-icon name="person-outline"></ion-icon>
+                    <ion-icon name="people-outline"></ion-icon>
                 </span>
                 <span class="title">Customers</span>
             </a>

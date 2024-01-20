@@ -216,7 +216,7 @@ body{
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-gap: 30px;
 }
 
@@ -294,18 +294,6 @@ body{
     display: inline;
 }
 
-/* .details .btn{
-    position: relative;
-    padding:5px 10px;
-    background: var(--color-dark-light);
-    text-decoration: none;
-    color: var(--color-light);
-    border-radius: 6px;
-    width: 80px;
-    text-align: center;
-    display: inline;
-} */
-
 .topic__header {
     display: flex;
     justify-content: space-between;
@@ -342,11 +330,11 @@ body{
 a{
     margin-left: 10px;
     text-decoration: none;
-    color: var(--color-gray);
+    color: var(--color-main);
     font-weight: 600;
 }
 a:hover{
-    color: var(--color-main);
+    color: var(--color-main-light);
 }
 
 .btn--main {
@@ -397,7 +385,7 @@ p.empty {
     text-align: center;
 }
 .details .topics table tr td:nth-child(3){
-    text-align: end;
+    text-align: center;
 }
 
 .details .topics table tr td:nth-child(4){
@@ -422,22 +410,6 @@ button{
     color: var(--color-light);
 }
 
-.btn-delete{
-    padding: 2px 4px;
-    background: red;
-    color: var(--color-light);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500    ;
-}
-.btn-edit{
-    padding: 2px 9px;
-    background: var(--color-main);
-    color: var(--color-light);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500    ;
-}
 
 /*==============================
     =>  Forms
@@ -499,13 +471,14 @@ button{
 
 .form__group input,
 .form__group textarea,
-.form__group select {
+.form__group select,
+.form__group option {
     background: transparent;
     border: 1px solid var(--color-dark-light);
     padding: 1rem;
     border-radius: 3px;
     width: 100%;
-    color: var(--color-light);
+    color: var(--color-main);
     font-weight: 500;
     outline: none;
 }
@@ -522,8 +495,8 @@ button{
 }
 
 .form__group select {
-    color: var(--color-gray);
-    font-weight: 400;
+    color: var(--color-main);
+    font-weight: 600;
 }
 
 .form__group select option {
@@ -556,34 +529,6 @@ button{
 }
 
 
-.user__role {
-    padding: 10px;
-}
-
-.user__role label.title {
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 2rem;
-}
-
-.user__role input[type="radio"] {
-    float: left;
-    margin-right: 10px;
-    margin-top: px;
-    width: 20px;
-    min-height: 20px;
-}
-
-.user__role label {
-    display: block;
-    margin-bottom: 10px;
-}
-.user__role label{
-    font-size: 1rem;
-}
-.user__role input[type="radio"]:checked {
-    background: var(--color-bg);
-}
 
 
 /*==============================

@@ -22,7 +22,7 @@ class TransfareRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'amount' => 'required|numeric|min:0',
+            'amount' => 'required|numeric|min:100',
         ];
     }
 }

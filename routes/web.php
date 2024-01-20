@@ -2,18 +2,9 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TransfareController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 
 
@@ -22,5 +13,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::group(['prefix' => 'customers'], function () {
     Route::get('/', [CustomerController::class, 'index'])->name('customers.index');
     Route::get('/{id}', [CustomerController::class, 'show'])->name('customers.show');
-    Route::post('/{id}/transfares', [CustomerController::class, 'transfare'])->name('customers.transfares');
+    Route::get('/{id}/transfares', [TransfareController::class, 'create'])->name('customers.transfares.create');
+    Route::post('/{id}/transfares', [TransfareController::class, 'transfare'])->name('customers.transfares');
 });
+
+Route::get('/{pathMatch}', function () {
+    return view('admin.notFound');
+})->where('pathMatch', ".*");

@@ -28,9 +28,18 @@ class Transfare extends Model
         });
     }
 
-    public function transfares()
+    public function customer()
     {
         return $this->belongsTo(Customer::class, 'account');
+    }
+
+    public function from_customer()
+    {
+        return $this->belongsTo(Customer::class, 'from', 'account');
+    }
+    public function to_customer()
+    {
+        return $this->belongsTo(Customer::class, 'to', 'account');
     }
 
 }
